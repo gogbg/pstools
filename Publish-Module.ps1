@@ -12,4 +12,4 @@ param
 
 #Find Module manifest
 $moduleFolder = Get-Item -Path $ModulePath
-Publish-Module -Path $moduleFolder.FullName -NuGetApiKey ($ApiKey | ConvertFrom-SecureString -AsPlainText) -Repository $Repository -ErrorAction Stop
+Publish-Module -Path $moduleFolder.FullName -NuGetApiKey ($ApiKey | ConvertFrom-SecureString -AsPlainText) -Force -Repository $Repository -ErrorAction Stop
