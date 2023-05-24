@@ -18,8 +18,8 @@ try
 {
     $modulesInfo = @{
         Name           = 'PowerShellGet'
-        InstallVersion = '3.0.17-beta17'
-        DetectVersion  = '3.0.17'
+        InstallVersion = '3.0.21-beta21'
+        DetectVersion  = '3.0.21'
     }
     $moduleExist = Get-Module -FullyQualifiedName @{ModuleName = $modulesInfo['Name']; RequiredVersion = $modulesInfo['DetectVersion'] } -ListAvailable -Refresh -ErrorAction SilentlyContinue
     if (-not $moduleExist)
