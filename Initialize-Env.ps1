@@ -13,6 +13,8 @@ Configure the local system with commonly required SDLC settings. Will install co
 param
 ()
 
+$PSVersionTable
+
 #install PowerShellGet/3
 try
 {
