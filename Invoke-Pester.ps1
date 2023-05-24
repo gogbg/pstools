@@ -2,12 +2,8 @@
 param
 (
     [Parameter(Mandatory)]
-    [string]$TestLocation
+    [string]$TestPath
 )
-
-#initialize environment
-$initializeDevEnvScript = Join-Path $PSScriptRoot -ChildPath 'Initialize-Env.ps1'
-& $initializeDevEnvScript
 
 #install dependencies
 Install-PSResource -RequiredResource @{
@@ -21,7 +17,7 @@ Install-PSResource -RequiredResource @{
 $pesterConfig = New-PesterConfiguration -Hashtable @{
     Run          = @{
         Container = @(
-            New-PesterContainer -Path $TestLocation
+            New-PesterContainer -Path $TestPath
         )
     }
     TestResult   = @{
