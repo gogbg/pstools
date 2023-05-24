@@ -5,8 +5,8 @@ param
     [string]$TestLocation
 )
 
-#initialize dev environment
-$initializeDevEnvScript = Join-Path $PSScriptRoot -ChildPath 'Initialize-DevEnvironment.ps1'
+#initialize environment
+$initializeDevEnvScript = Join-Path $PSScriptRoot -ChildPath 'Initialize-Env.ps1'
 & $initializeDevEnvScript
 
 #install dependencies
