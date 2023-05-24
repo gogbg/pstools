@@ -6,7 +6,7 @@ param
 
 #Find Module manifest
 $moduleFolder = Get-Item -Path $ModulePath
-$maduleManifestFile = Join-Path -Path $moduleFolder -ChildPath "$($moduleFolder.BaseName).psm1"
+$maduleManifestFile = Join-Path -Path $moduleFolder -ChildPath "$($moduleFolder.BaseName).psd1"
 $moduleManifest = Import-PowerShellDataFile -Path $maduleManifestFile -ErrorAction Stop
 
 #Install module requiredmodules
